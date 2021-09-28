@@ -1,0 +1,40 @@
+0
+00:00:00,380 --> 00:00:06,220
+Welcome to this module on Introduction to Data Analysis with Python.
+
+1
+00:00:06,220 --> 00:00:10,620
+In this module, you&#39;ll learn about an example around estimating used car prices that we
+
+2
+00:00:10,620 --> 00:00:13,950
+will analyze in this course, using Python.
+
+3
+00:00:13,950 --> 00:00:19,099
+Then we will introduce an overview of Python packages used for data analysis.
+
+4
+00:00:19,099 --> 00:00:24,720
+And finally, you will learn about how to import and export data in and from Python, and how
+
+5
+00:00:24,720 --> 00:00:30,809
+to obtain basic insights from the dataset on used cars and their prices.
+
+6
+00:00:30,809 --> 00:00:36,040
+So to learn how to analyze data in Python, we&#39;ll be answering the following question:
+
+7
+00:00:36,040 --> 00:00:40,710
+&quot;Can we estimate the price of a used car based on its characteristics?&quot;
+
+8
+00:00:40,710 --> 00:00:46,240
+To answer this question, we are going to use various Python packages to perform data cleaning,
+
+9
+00:00:46,240 --> 00:00:50,500
+exploratory data analysis, model development and model evaluation.
+
