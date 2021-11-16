@@ -1,0 +1,58 @@
+In this video, we'll study Analysis of Variance.
+Assume that we want to analyze a categorical variable and see the correlation among different
+categories.
+For example, consider the car dataset, the question we may ask is, how different categories
+of the Make feature (as a categorical variable) has impact on the price?
+The diagram shows the average price of different vehicle makes.
+We do see a trend of increasing prices as we move right along the graph.
+But which category in the make feature has the most and which one has the least impact
+on the car price prediction?
+To analyze categorical variables such as the
+"make" variable, we can use a method such
+as the ANOVA method.
+ANOVA is a statistical test that stands for "Analysis of Variance".
+ANOVA can be used to find the correlation between different groups of a categorical
+variable.
+According to the car dataset, we can use ANOVA to see if there is any difference in mean
+price for the different car makes such as Subaru and Honda.
+The ANOVA test returns two values: the F-test score and the p-value.
+The F-test calculates the ratio of variation between the groups's mean over the variation
+within each of the sample groups.
+The p-value shows whether the obtained result is statistically significant.
+Without going too deep into the details, the F-test calculates the ratio of variation between
+group means over the variation within each of the sample group means.
+This diagram illustrates a case where the F-test score would be small.
+Because, as we can see the variation of the prices in each group of data is way larger
+than the differences between the average values of each group.
+Looking at this diagram, assume that, group 1 is "Honda" and group 2 is "Subaru";
+both are the make feature categories.
+Since the F-score is small, the correlation between price as the target variable and the
+groupings is weak.
+In this second diagram, we see a case where the F-test score would be large.
+The variation between the averages of the two groups is comparable to the variations
+within the two groups.
+Assume that group 1 is "Jaguar" and group 2 is "Honda"; both are the Make feature
+categories.
+Since the F-score is large, thus the correlation is strong in this case.
+Getting back to our example, the bar chart shows the average price for different categories
+of the make feature.
+As we can see from the bar chart, we expect a small F-score between "Hondas" and "Subarus"
+because there is a small difference between the average prices.
+On the other hand, we can expect a large F-value between Hondas and Jaguars because the differences
+between the prices is very significant.
+However, from this chart we do not know the exact variances, so let's perform an ANOVA
+test to see if our intuition is correct.
+In the first line we extract the make and price data.
+Then, we'll group the data by different makes.
+The ANOVA test can be performed in Python using the f_oneway method as the built-in
+function of the Scipy package.
+We pass in the price data of the two car make groups that we want to compare and it calculates
+the ANOVA results.
+The results confirm what we guessed at first.
+The prices between Hondas and Subarus are not significantly different, as the F-test
+score is less than 1 and p-value is larger than 0.05.
+We can do the same for Honda and Jaguar.
+The prices between Hondas and Jaguars are significantly different, since the F-score
+is very large (F = 401) and the p-value is larger than 0.05.
+All in all, we can say that there is a strong correlation between a categorical variable
+and other variables, if the ANOVA test gives us a large F-test value and a small p-value.
