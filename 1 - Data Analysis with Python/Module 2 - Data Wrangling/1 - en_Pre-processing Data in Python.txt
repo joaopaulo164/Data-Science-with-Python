@@ -1,0 +1,34 @@
+In this video, we’ll be going through some data pre-processing techniques.
+If you’re unfamiliar with the term, data pre-processing is a necessary step in data
+analysis.
+It is the process of converting or mapping data from one “raw” form into another
+format to make it ready for further analysis.
+Data pre-processing is also often called “data cleaning” or “data wrangling”, and there
+are likely other terms.
+Here are the topics that we’ll be covering in this module:
+First, we’ll show you how to identify and handle missing values.
+A “missing value” condition occurs whenever a data entry is left empty.
+Then, we’ll cover data formats.
+Data from different sources may be in various formats, in different units or in various
+conventions.
+We will introduce some methods in Python pandas that can standardize the values into the same
+format, or unit, or convention.
+After that, we’ll cover data normalization.
+Different columns of numerical data may have very different ranges, and direct comparison
+is often not meaningful.
+Normalization is a way to bring all data into a similar range, for more useful comparison.
+Specifically, we’ll focus on the techniques of centering and scaling.
+And then, we’ll introduce data binning.
+Binning creates bigger categories from a set of numerical values.
+It is particularly useful for comparison between groups of data.
+And lastly, we’ll talk about categorical variables and show you how to convert categorical
+values into numeric variables to make statistical modeling easier.
+In Python, we usually perform operations along columns; each row of the column represents
+a sample, i.e., a different used car in the database.
+You access a column by specifying the name of the column.
+For example, you can access "symbolling” and “body-style”; each of these columns
+is a pandas series.
+There are many ways to manipulate dataframes in Python.
+For example, you can add a value to each entry of a column.
+To add 1 to each “symbolling” entry, use this command.
+This changes each value of the dataframe column by adding 1 to the current value.

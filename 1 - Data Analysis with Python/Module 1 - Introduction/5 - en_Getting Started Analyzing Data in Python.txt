@@ -1,0 +1,63 @@
+In this video, we introduce some simple pandas methods that all data scientists and analysts
+should know when using Python pandas and data.
+At this point, we assume that the data has been loaded.
+It's time for us to explore the dataset.
+Panda's has several built in methods that could be used to understand the datatype of
+features or to look at the distribution of data within the dataset.
+Using these methods gives an overview of the dataset.
+And also point out potential issues, such as the wrong datatype of features, which may
+need to be resolved later on.
+Data has a variety of types.
+The main types stored in Pandas objects are object, float, int, and datetime.
+The datatype names are somewhat different from those in native Python.
+This table shows the differences and similarities between them.
+Some are very similar, such as the numeric datatypes "int" and "float".
+The "object" pandas type functions similar to "string" in Python, save for the change
+in name, while the "datetime" pandas type, is a very useful type for handling time series
+data.
+There are two reasons to check data types in a dataset.
+Pandas automatically assigns types based on the encoding it detects from the original
+data table.
+For a number of reasons, this assignment may be incorrect.
+For example, it should be awkward if the "car price" column, which we should expect to
+contain continuous numeric numbers, is assigned the datatype of "object".
+It would be more natural for it to have the float type.
+Jerry may need to manually change the datatype to float.
+The second reason is that it allows an experienced data scientist to see which Python functions
+can be applied to a specific column.
+For example, some math functions can only be applied to numerical data.
+If these functions are applied to non-numerical data, an error may result.
+When the "dtype" method is applied to the data set, the datatype of each column
+is returned in a Series.
+A good data scientist's intuition tells us that most of the data types make sense.
+The make of cars, for example, are names,
+so this information should be of type object.
+The last one on the list could be an issue.
+As bore is a dimension of an engine, we should expect a numerical data type to be used.
+Instead, the object type is used.
+In later sections, Jerry will have to correct these type mismatches.
+Now we would like to check the statistical summary of each column to learn about the
+distribution of data in each column.
+The statistical metrics can tell the data scientist if there are mathematical issues
+that may exist, such as extreme outliers and large deviations.
+The data scientist may have to address these issues later.
+To get the quick statistics, we use the describe method.
+It returns the number of terms in the column as
+"count", average column value as "mean",
+column standard deviation as "std", the maximum and minimum values,
+as well as the boundary of each of the quartiles.
+By default, the dataframe.describe() function skips rows and columns that do not contain
+numbers.
+It is possible to make the describe method work for object-type columns as well.
+To enable a summary of all the columns, we could add an argument include = "all" inside
+the describe function bracket.
+Now the outcome shows the summary of all the 26 columns, including object-typed attributes.
+We see that for object-type columns, a different set of statistics is evaluated, like unique,
+top and frequency.
+"Unique" is the number of distinct objects in the column, "top" is the most frequently
+occurring object, and "freq" is the number of times the top object appears in the column.
+Some values in the table are shown here as "NaN", which stands for "not a number".
+This is because that particular statistical metric cannot be calculated for that specific
+column data type.
+Another method you can use to check your dataset is the dataframe.info function.
+This function shows the top 30 rows and bottom 30 rows of the dataframe.

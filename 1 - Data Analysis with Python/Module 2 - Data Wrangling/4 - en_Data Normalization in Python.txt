@@ -1,0 +1,49 @@
+In this video, we’ll be talking about data normalization, an important technique to understand
+in data pre-processing.
+When we take a look at the used car data set, we notice in the data that the feature “length”
+ranges from 150 to 250, while feature “width” and “height” ranges from 50 to 100.
+We may want to normalize these variables so that the range of the values is consistent.
+This normalization can make some statistical analyses easier down the road.
+By making the ranges consistent between variables, normalization enables a fairer comparison
+between the different features.
+Making sure they have the same impact, it is also important for computational reasons.
+Here is another example that will help you understand why normalization is important.
+Consider a dataset containing two features: “age” and “income”, where “age”
+ranges from 0 to 100, while “income” ranges from 0 to 20,000 and higher.
+“income” is about 1,000 times larger than “age”, and ranges from 20,000 to 500,000.
+So these two features are in very different ranges.
+When we do further analysis, like linear regression, for example, the attribute “income” will
+intrinsically influence the result more, due to its larger value, but this doesn’t necessarily
+mean it is more ‘important’ as a predictor.
+So, the nature of the data biases the linear regression model to weigh income more heavily
+than age.
+To avoid this, we can normalize these two variables into values that range from 0 to 1.
+ 
+Compare the two tables at the right.
+After normalization, both variables now have a similar influence on the models we will
+build later.
+There are several ways to normalize data.
+I will just outline three techniques.
+The first method, called “simple feature scaling”, just divides each value by the
+maximum value for that feature.
+This makes the new values range between 0 and 1.
+The second method, called “Min-Max”, takes each value, X_old, subtracted from the minimum
+value of that feature, then divides by the range of that feature.
+Again, the resulting new values range between 0 and 1.
+The third method is called “z-score” or “standard score”.
+In this formula, for each value, you subtract the Mu which is the average of the feature,
+and then divide by the standard deviation (sigma).
+The resulting values hover around 0, and typically range between -3 and +3, but can be higher
+or lower.
+Following our earlier example, we can apply the normalization method on the “length”
+feature.
+First, we use the simple feature scaling method, where we divide it by the maximum value in
+the feature.
+Using the pandas method “max”, this can be done in just one line of code.
+Here’s the Min-max method on the “length” feature.
+We subtract each value by the minimum of that column, then divide it by the range of that
+column: the max minus the min.
+Finally we apply the Z-score method on length feature to normalize the values.
+Here, we apply the mean() and std() method on the length feature.
+mean() method will return the average value of the feature in the dataset, and std() method
+will return the standard deviation of the features in the dataset.

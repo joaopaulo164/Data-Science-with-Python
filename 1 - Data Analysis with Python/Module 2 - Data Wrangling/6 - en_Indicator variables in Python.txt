@@ -1,0 +1,26 @@
+In this video, we’ll discuss how to turn categorical variables into quantitative variables
+in Python.
+Most statistical models cannot take in objects or strings as input and, for model training,
+only take the numbers as inputs.
+In the car dataset, the "fuel-type" feature as a categorical variable has two values,
+"gas" or "diesel”, which are in String format.
+For further analysis, Jerry has to convert these variables into some form of numeric
+format.
+We encode the values by adding new features corresponding to each unique element in the
+original feature we would like to encode.
+In the case where the feature “Fuel” has two unique values, gas and diesel, we create
+two new features ‘gas’ and ‘diesel.'
+When a value occurs in the original feature we set the corresponding value to one in the
+new feature; the rest of the features are set to zero.
+In the fuel example, for car B, the fuel value is diesel.
+Therefore, we set the feature diesel equal to one and the gas feature to zero.
+Similarly, for car D the fuel value is gas.
+Therefore we set the feature gas equal to one and the feature diesel equal to zero.
+This technique is often called “one-hot encoding”.
+In pandas, we can use get_dummies() method to convert categorical variables to dummy
+variables.
+In Python, transforming categorical variables to dummy variables is simple.
+Following the example, pd.get_dummies() method gets the fuel-type column and creates the
+dataframe"dummy_variable_1".
+The get_dummies() method automatically generates a list of numbers, each one corresponding
+to a particular category of the variable.

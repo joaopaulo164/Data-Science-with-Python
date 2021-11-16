@@ -1,0 +1,44 @@
+In this video, we’ll look at the problem of data with different formats, units, and
+conventions, and the pandas methods that help us deal with these issues.
+Data is usually collected from different places, by different people, which may be stored in
+different formats.
+Data formatting means bringing data into a common standard of expression that allows
+users to make meaningful comparisons.
+As a part of dataset cleaning, data formatting ensures that data is consistent and easily
+understandable.
+For example, people may use different expressions to represent New York City, such as N.Y., Ny,
+NY, and New York.
+Sometimes, this “uncleaned” data is a good thing to see.
+For example, if you’re looking at the different ways people tend to write “New York”,
+then this is exactly the data that you want.
+Or if you’re looking for ways to spot fraud, perhaps writing “N dot Y dot” is more
+likely to predict an anomaly than if someone wrote out “New York” in full.
+But perhaps, more often than not, we just simply want to treat them all as the same entity,
+or format, to make statistical analyses easier down the road.
+Referring to our used car dataset, there’s a feature named “city-mpg” in the dataset,
+which refers to a car fuel consumption in miles per gallon unit.
+However, you may be someone who lives in a country that uses metric units.
+So you would want to convert those values to L/100km --the metric version.
+To transform mpg to L/100km we need to divide 235 by each value in the city-mpg column.
+In Python, this can easily be done in one line of code.
+You take the column and set it equal to 235 divided by the entire column.
+In the second line of code, rename column name from "city-mpg" to "city-L/100km" using
+the dataframe.rename() method.
+For a number of reasons, including when you import a dataset into Python, the data type
+may be incorrectly established.
+For example, here we notice that the assigned data type to the price feature is “object”
+although the expected data type should really be an integer or float type.
+It is important for later analysis to explore the feature’s data type and convert them
+to the correct data types; otherwise, the developed models later on may behave strangely,
+and totally valid data may end up being treated like missing data.
+There are many data types in pandas.
+Objects can be letters or words.
+Int64 are integers.
+And Floats are real numbers.
+There are many others that we will not discuss.
+To identify a features data type, in Python we can use the dataframe.dtypes() method and
+check the datatype of each variable in a dataframe.
+In the case of wrong datatypes, the method dataframe.astype() can be used to convert
+a datatype from one format to another.
+For example, using astype(“int”) for the price column, you can convert the object column
+into an integer type variable.

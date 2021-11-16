@@ -1,0 +1,58 @@
+In this video, we’ll look at how to read in data using Python’s pandas package.
+Once we have our data in Python, then we can perform all the subsequent data analysis procedures
+we need.
+Data acquisition is a process of loading and reading data into notebook from various sources.
+To read any data using Python’s pandas package, there are two important factors to consider:
+format and file path.
+Format is the way data is encoded.
+We can usually tell different encoding schemes by looking at the ending of the file name.
+Some common encodings are csv, json, xlsx, hdf and so forth.
+The (file) path tells us where the data is stored.
+Usually it is stored either on the computer we are using, or online on the internet.
+In our case, we found a dataset of used cars, which was obtained from the web address shown
+on the slide.
+When Jerry entered the web address in his web browser, he saw something like this.
+Each row is one data point.
+A large number of properties are associated with each data point.
+Because the properties are separated from each other by commas, we can guess the data
+format is csv, which stands for comma separated values.
+At this point, these are just numbers and don’t mean much to humans, but once we read
+in this data, we can try to make more sense out of it.
+In pandas, the “read_csv()” method can read in files with columns separated by commas
+into a pandas DataFrame.
+Reading data in pandas can be done quickly in three lines.
+First, import pandas.
+Then define a variable with the file path.
+And then use the read_csv method to import the data.
+However, “read_csv” assumes that the data contains a header.
+Our data on used cars has no column headers, so we need to specify “read_csv” to not
+assign headers by setting header to “none”.
+After reading the dataset, it is a good idea to look at the dataframe to get a better intuition
+and to ensure that everything occurred the way you expected.
+Since printing the entire dataset may take up too much time and resources, to save time,
+we can just use dataframe.head() to show the first n rows of the data frame.
+Similarly, dataframe.tail(n) shows the bottom n rows of data frame.
+Here, we printed out the first 5 rows of data.
+It seems that the dataset was read successfully!
+We can see that pandas automatically set the column header as a list of integers, because
+we set header=None when we read the data.
+It is difficult to work with the dataframe without having meaningful column names, however,
+we can assign column names in pandas.
+In our present case, it turned out the we have the column names in a separate file online.
+We first put the Column names in a list called headers.
+Then, we set df.columns equals headers to replace the default integer headers by the
+list.
+If we use the head() method introduced in the last slide to check the dataset, we see
+the correct headers inserted at the top of each column.
+At some point in time after you’ve done operations on your dataframe, you may want
+to export your pandas dataframe to a new CSV file.
+You can do this using the method, ”to_csv()"
+To do this, specify the file path (which includes the filename) that you want to write to.
+For example, if you would like to save the dataframe "df" as "automobile.csv" to your
+own computer, you can use the syntax: df.to_csv ("automobile.csv")
+For this course, we will only read and save csv files.
+However, pandas also supports importing and exporting of most data filetypes with different
+dataset formats.
+The code syntax for reading and saving other data formats is very similar to read or save
+csv file.
+Each column shows a different method to read and save files into a different format.

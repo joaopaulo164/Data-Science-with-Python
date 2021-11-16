@@ -1,0 +1,19 @@
+In this module we’re going to cover the basics of Exploratory Data Analysis using
+Python.
+Exploratory Data Analysis, or in short “EDA”, is an approach to analyze data in order to:
+- summarize main characteristics of the data - gain better understanding of the dataset,
+- uncover relationships between different variables, and
+- extract important variables for the problem we are trying to solve.
+The main question we are trying to answer in this module is:
+“What are the characteristics that have the most impact on the car price?”
+We will be going through a couple of different useful exploratory data analysis techniques
+in order to answer this question.
+In this module you will learn about: Descriptive Statistics, which describe basic
+features of a dataset and obtains a short summary about the sample and measures of the
+data.
+Basic of Grouping Data using group by, and how this can help to transform our dataset.
+ANOVA, the analysis of variance, a statistical method in which the variation in a set of
+observations is divided into distinct components.
+The Correlation between different variables.
+And lastly, Advanced Correlation, where we’ll introduce you to various correlation statistical
+methods, namely Pearson Correlation and Correlation Heatmaps.
