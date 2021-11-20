@@ -1,0 +1,64 @@
+In this video we will cover Polynomial Regression and Pipelines.
+What do we do when a linear model is not the best fit for our data?
+Let’s look into another type of regression model: the polynomial regression.
+We Transform our data into a polynomial, then use linear regression to fit the parameter.
+Then we will discuss pipelines.
+Pipelines are a way to simplify your code.
+Polynomial regression is a special case of the general linear regression.
+This method is beneficial for describing curvilinear relationships.
+What is a curvilinear relationship?
+It’s what you get by squaring or setting higher-order terms of the predictor variables
+in the model, transforming the data.
+The model can be quadratic, which means that the predictor variable in the model is squared.
+We use a bracket to indicate it is an exponent.
+This is a second order Polynomial regression with a figure representing the function.
+The model can be cubic, which means that the predictor variable is cubed.
+This is a third order Polynomial regression.
+We see by examining the figure that the function has more variation.
+There also exists higher order polynomial regressions, when a good fit hasn’t been
+achieved by second or third order.
+We can see in figures how much the graphs change when we change the order of the polynomial
+regression.
+The degree of the regression makes a big difference and can result in a better fit if you pick
+the right value.
+In all cases, the relationship between the variable and the parameter is always linear.
+Let’s look at an example from our data where we generate a polynomial regression model.
+In Python, we do this by using the polyfit() function.
+In this example, we develop a third order polynomial regression model base.
+We can print out the model.
+Symbolic form for the model is given by the following expression (negative 1.557 x1 cubed
+plus 204.8 x1 squared, plus 8,965 x1 plus 1.37 times 10 to the power of 5).
+We can also have multi-dimensional polynomial linear regression.
+The expression can get complicated; here are just some of the terms for a two-dimensional
+second order polynomial.
+Numpy’s “polyfit” function cannot perform this type of regression.
+We use the "preprocessing" library in sci-kit-learn, to create a polynomial feature object.
+The constructor takes the degree of the polynomial as a parameter.
+Then we transform the features into a polynomial feature with the “fit_transform” method.
+Let's do a more intuitive example.
+Consider the features shown here.
+Applying the method, we transform the data We now have a new set of features that are
+a transformed version of our original features.
+As the dimension of the data gets larger we may want to normalize multiple features in
+scikit-learn, instead, we can use the preprocessing module to simplify many tasks.
+For example, we can Standardize each feature simultaneously.
+We import “StandardScaler” We train the object, fit the scale object;
+then transform the data into a new dataframe on array “x_scale”.
+There are more normalization methods available in the preprocessing library, as well as other
+transformations.
+We can simplify our code by using a pipeline library.
+There are many steps to getting a prediction, for example, Normalization, Polynomial transform,
+and Linear regression.
+We simplify the process using a pipeline.
+Pipelines sequentially perform a series of transformation.
+The last step carries out a prediction.
+First we import all the modules we need.
+Then we import the library Pipeline.
+We create a list of tuples, the first element in the tuple contains the name of the estimator:
+model.
+The second element contain model constructor.
+We input the list in the pipeline constructor.
+We now have a pipeline object.
+We can train the pipeline by applying the train method to the Pipeline object.
+We can also produce a prediction as well.
+The method normalizes the data, performs a polynomial transform, then outputs a prediction.

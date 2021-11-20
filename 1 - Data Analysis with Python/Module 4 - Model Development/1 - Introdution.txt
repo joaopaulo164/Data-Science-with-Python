@@ -1,0 +1,22 @@
+In this video, we will examine model development by trying to predict the price of a car using
+our dataset.
+In this module you will learn about: - Simple and Multiple Linear Regression
+- Model Evaluation using Visualization - Polynomial Regression and Pipelines
+- R-squared and MSE for In-Sample Evaluation - Prediction and Decision Making
+- And how can you determine a fair value for a used car?
+A model or estimator can be thought of as a mathematical equation used to predict a
+value given one or more other values.
+Relating one or more independent variables or features to dependent variables.
+For example, you input a car model’s highway miles per gallon (MPG) as the independent
+variable or feature, the output of the model or dependent variable is the price.
+Usually the more relevant data you have the more accurate your model is.
+For example, you input multiple independent variables or features to your model.
+Therefore, your model may predict a more accurate price for the car.
+To understand why more data is important, consider the following situation:
+- You have two almost identical cars - Pink cars sell for significantly less
+You want to use your model to determine the price of two cars, one pink, one red.
+If your model's independent variables or features do not include color, your model will predict
+the same price for cars that may sell for much less.
+In addition to getting more data, you can try different types of models.
+In this course you will learn about: - Simple Linear Regression
+- Multiple Linear Regression - And, Polynomial Regression

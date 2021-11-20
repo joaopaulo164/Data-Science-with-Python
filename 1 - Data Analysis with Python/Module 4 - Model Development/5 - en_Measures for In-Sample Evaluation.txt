@@ -1,0 +1,52 @@
+Now that we’ve seen how we can evaluate a model by using visualization, we want to
+numerically evaluate our models.
+Let’s look at some of the measures that we use for in-sample evaluation.
+These measures are a way to numerically determine how good the model fits on our data.
+Two important measures that we often use to determine the fit of a model are: Mean Square
+Error (MSE), and R-squared.
+To measure the MSE, we find the difference between the actual value y and the predicted
+value yhat then square it.
+In this case, the actual value is 150; the predicted value is 50. Subtracting these points
+we get 100.
+We then square the number.
+We then take the Mean or average of all the errors by adding then all together and dividing
+by the number of samples.
+To find the MSE in Python, we can import the “mean_Squared_error()” from “scikit-learn.metrics”.
+The “mean_Squared_error()” function gets two inputs: the actual value of target variable
+and the predicted value of target variable.
+R-squared is also called the coefficient of determination. It’s a measure to determine
+how close the data is to the fitted regression line. So how close is our actual data to our
+estimated model?
+Think about it as comparing a regression model to a simple model, i.e., the mean of the data
+points. If the variable x is a good predictor our model should perform much better than
+[with] just the mean.
+In this example the average of the data points 𝑦 | is 6.
+Coefficient of Determination or R^2 is 1 minus the ratio of the MSE of the regression
+line divided by the MSE of the average of the data points. For the most part, it takes
+values between 0 and 1.
+Let’s look at a case where the line provides a relatively good fit.
+The blue line represents the regression line.
+The blue squares represent the MSE of the regression line.
+The red line represents the average value of the data points.
+The red squares represent the MSE of the red line.
+We see the area of the blue squares is much smaller than the area of the red squares.
+In this case, because the line is a good fit, the Mean squared error is small, therefore
+the numerator is small.
+The Mean squared error of the line is relatively large, as such the numerator is large.
+A small number divided by a larger number is an even smaller number. Taken to an extreme
+this value tends to zero.
+If we Plug in this value from the previous slide for R^2, we get a value near one, this
+means the line is a good fit for the data. Here is an example of a line that does not
+fit the data well.
+If we just examine the area of the red squares compared to the blue squares, we see the area
+is almost identical.
+The ratio of the areas is close to one.
+In this case the R^2 is near zero.
+This line performs about the same as just using the average of the data points, therefore,
+this line did not perform well.
+We find the R-squared value in Python by using the score() method, in the linear regression
+object.
+From the value that we get from this example, we can say that approximately 49.695% of the
+variation of price is explained by this simple linear model.
+Your R^2 value is usually between 0 and 1, if your R^2 is negative it can be due to overfitting
+that we will discuss in the next module.

@@ -1,0 +1,72 @@
+In this video, our final topic will be on Prediction and Decision Making: How can we
+determine if our model is correct?
+The first thing you should do is make sure your model results make sense.
+You should always use Visualization, Numerical measures for evaluation, and Comparing between
+different models.
+Let’s look at an example of prediction; if you recall we train the model using the
+fit method.
+Now we want to find out what the price would be for a car that has a highway-mpg of 30.
+Plugging this value into the predict() method, gives us a resulting price of $13,771.30.
+This seems to make sense, for example, the value is not negative, extremely high or extremely
+low.
+We can look at the coefficients by examining the “coef_” attribute.
+If you recall.
+the expression for the simple linear model that predicts price from highway-mpg, this
+value corresponds to the multiple of the highway-mpg feature.
+As such, an increase of one unit in highway-mpg, the value of the car decreases approximately
+821 dollars; this value also seems reasonable.
+Sometimes your model will produce values that don't make sense, for example, if we plot
+the model out for highway-mpg, in the ranges of 0 to 100, we get negative values for the
+price.
+This could be because the values in that range are not realistic, the linear assumption is
+incorrect, or we don't have data for cars in that range.
+In this case, it is unlikely that a car will have fuel mileage in that range, so our model
+seems valid.
+To generate a sequence of values in a specified range, import numpy, then use the numpy "arrange"
+function to generate the sequence.
+The sequence starts at one and increments by one till we reach 100.
+The first parameter is the starting point of the sequence.
+The second parameter is the end point plus one of the sequence.
+The final parameter is the step size between elements in the sequence, in this case, it’s
+one, so we increment the sequence one step at a time, from 1 to 2, and so on.
+We can use the output to predict new values; the output is a numpy array.
+Many of the values are negative.
+Using a regression plot to visualize your data is the first method you should try.
+See the labs for examples of how to plot polynomial regression.
+For this example, the effect of the independent variable is evident in this case.
+The data trends down as the dependent variable increases.
+The plot also shows some non-linear behavior.
+Examining the Residual Plot We see in this case the Residuals have a curvature
+suggesting non-linear behavior.
+A distribution plot, is a good method for Multiple Linear Regression.
+For example: We see the predicted values for prices in
+the range from $3,0000 to $50,000 are inaccurate This suggests a non-linear model may be more
+suitable or we need more data in this range.
+The mean square error is perhaps the most intuitive Numerical measure for determining
+if a model is good or not; let’s see how different measures of Mean square error impact
+the model.
+The figure shows an example of a mean square error of 3,495.
+This example has a mean square error of 3,652.
+The final plot has a mean square error of 12,870.
+As the square error increases, the targets get further from the predicted points.
+As we discussed, R^2 (R-squared) is another popular method to evaluate your model.
+In this plot, we see the target points in red and the predicted line in blue, an R^2
+of 0.9986; the model appears to be a good fit.
+This model has a R^2 of 0.9226; there still is a strong linear relationship.
+An R^2 of 0806 the data is a lot more messy but the linear relation is evident.
+An R^2 of 0.61 the linear function is harder to see, but, on closer inspection, we see
+the data is increasing with the independent variable.
+An acceptable value for R^2 depends on what field you’re studding.
+Some authors suggest a value should be equal to or greater than 0.10.
+Comparing MLR and SLR:
+Is a lower MSE always implying a better fit?
+Not necessarily.
+ 
+MSE for an MLR model will be smaller than the MSE for an SLR model, since the errors
+of the data will decrease when more variables are included in the model.
+ 
+Polynomial regression will also have a smaller MSE then regular regression.
+ 
+A similar inverse relationship holds for R^2.
+ 
+In the next section we’ll look at better ways to evaluate the model.

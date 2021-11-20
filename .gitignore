@@ -110,6 +110,14 @@ ENV/
 env.bak/
 venv.bak/
 
+.dataScience-env
+.vdataScience-env
+dataScience-env/
+vdataScience-env/
+DATASCIENCE-ENV
+dataScience-env.bak/
+vdataScience-env.bak/
+
 # Spyder project settings
 .spyderproject
 .spyproject

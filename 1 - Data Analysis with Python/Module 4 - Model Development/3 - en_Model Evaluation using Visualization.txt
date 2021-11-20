@@ -1,0 +1,71 @@
+In this video, we’ll look at model evaluation using visualization.
+Regression plots are a good estimate of:
+The relationship between two variables,
+The strength of the correlation, and
+The direction of the relationship (positive or negative).
+The horizontal axis is the independent variable.
+The vertical axis is the dependent variable.
+Each point represents a different target point.
+The fitted line represents the predicted value.
+There are several ways to plot a regression plot; a simple way is to use "regplot" from
+the seaborne library.
+First import seaborn.
+Then use the "regplot" function.
+The parameter x is the name of the column that contains the dependent variable or feature.
+The parameter y contains the name of the column that contains the name of the dependent variable
+or target.
+The parameter data is the name of the dataframe.
+The result is given by the plot.
+The residual plot represents the error between the actual values.
+Examining the predicted value and actual value we see a difference.
+We obtain that value by subtracting the predicted value and the actual target value.
+We then plot that value on the vertical axis, with the dependent variable as the horizontal
+axis.
+Similarly, for the second sample, we repeat the process.
+Subtracting the target value from the predicted value; then plotting the value accordingly.
+Looking at the plot gives us some insight into our data.
+We expect to see the results to have zero mean.
+Distributed evenly around the x axis with similar variance; there is no curvature.
+This type of residual plot suggests a linear plot is appropriate.
+In this residual plot there is curvature, the values of the error change with x.
+For example, in the region, all the residual errors are positive.
+In this area, the residuals are negative.
+In the final location, the error is large.
+The residuals are not randomly separated; this suggests the linear assumption is incorrect.
+This plot suggests a non-linear function, we will deal with this in the next section.
+In this plot, we see that variance of the residuals increases with x, therefore our model is incorrect.
+We can use seabborn to create a Residual Plot.
+First import seaborn.
+We use the “residplot” function.
+The first parameter is a series of dependent variable or feature.
+The second parameter is a Series of dependent variable or target.
+We see in this case the Residuals have a curvature.
+A distribution plot counts the predicted value versus the actual value.
+These plots are extremely useful for visualizing models with more than one independent variable
+or feature.
+Let's look at a simplified example: - We examine the vertical axis.
+- We then count and plot the number of predicted points that are approximately equal to one.
+- We then count and plot the number of predicted points that are approximately equal to two.
+- We repeat the process for predicted points that are approximately equal to three.
+Then we repeat the process for the target values.
+In this case, all the target values are approximately equal to two.
+The values of the targets and predicted values are continuous.
+A histogram is for discrete values.
+Therefore pandas will convert them to a distribution.
+The vertical access is scaled to make the area under the distribution equal to one.
+This is an example of using a distribution plot.
+The dependent variable or feature is price.
+The fitted values that result from the model are in blue.
+The actual values are in red.
+We see the predicted values for prices in the range from $40 000 to $50 000 are inaccurate.
+The prices in the region form $10 000 to $20 000 are much closer to the target value.
+In this example, we use multiple features or independent variables.
+Comparing it to the plot on the last slide, we see predicted values are much closer to
+the target values.
+Here is the code to create a Distribution Plot.
+The actual values are used as a parameter.
+We want a distribution instead of a histogram so we want the hist parameter set to false.
+The color is red.
+The label is also included.
+The predicted values are included for the second plot; the rest of the parameters are
+set accordingly.

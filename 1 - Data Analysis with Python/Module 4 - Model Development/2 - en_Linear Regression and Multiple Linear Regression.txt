@@ -1,0 +1,70 @@
+In this video, we’ll be talking about simple linear regression and multiple linear regression.
+Linear Regression will refer to one independent variable to make a prediction.
+Multiple Linear Regression will refer to multiple independent variables to make a prediction.
+Simple Linear Regression (or SLR) is: A method to help us understand the relationship between
+two variables: The predictor (independent) variable x, and the target (dependent) variable y.
+We would like to come up with a linear relationship
+between the variables shown here. - The parameter b zero is the intercept
+- The parameter b one is the slope When we fit or train the model, we will come
+up with these parameters. This step requires lots of math, so we will not focus on this
+part. Let’s clarify the prediction step. It’s hard to figure out how much a car costs,
+but the Highway Miles per Gallon is in the owner’s manual. If we assume, there is a
+linear relationship between these variables, we can use this relationship to formulate
+a model to determine the price of the car. If the Highway Miles per Gallon is 20, we
+can input his value into the model to obtain a prediction of $22,000.
+In order to determine the line, we take data points from our data set marked in red here.
+We then use these training points to fit our model; the results of the training points
+are the parameters. We usually store the data points in two dataframe
+or numpy arrays. The value we would like to predict is called
+the target that we store in the array y, we store the dependent variable in the dataframe
+or array X. Each sample corresponds to a different row
+in each dataframe or array. In many cases, many factors influence how
+much people pay for a car, for example, make or how old the car is. In this model, this
+uncertainty is taken into account by assuming a small random value is added to the point
+on the line; this is called noise. The figure on the left shows the distribution
+of the noise. The vertical axis shows the value added and the horizontal axis illustrates
+the probability that the value will be added. Usually, a small positive value is added,
+or a small negative value. Sometimes large values are added, but for the most part, the
+values added are near zero. We can summarize the process like this:
+- We have a set of training points - We use these training points to fit or train
+the model and get parameters - We then use these parameters in the model
+- We now have a model; we use the hat on the y to denote the model is an estimate
+- We can use this model to predict values that we haven't seen.
+For example, we have no car with 20 Highway Miles per Gallon, we can use our model to
+make a prediction for the price of this car. But don't forget our model is not always correct.
+We can see this by comparing the predicted value to the actual value.
+We have a sample for 10 Highway Miles per Gallon, but the predicted value does not match
+the actual value. If the linear assumption is correct this error
+is due to the noise but there can be other reasons.
+To fit the model in Python, first we import linear model from scikit-learn; then Create
+a Linear Regression Object using the constructor. We define the predictor variable and target
+variable. Then use the method fit to fit the model and
+find the parameters b0 and b1. The input are the features and the targets.
+We can obtain a prediction using the method predict.
+The output is an array, the array has the same number of samples as the input X.
+The intercept (b0) is an attribute of the object “lm”.
+The slope (b1) is also an attribute of the object “lm”.
+The Relationship between Price and Highway MPG is given by this equation in bold: “Price
+= 38,423.31 minus 821.73 times highway mpg” like the equation we discussed before.
+Multiple Linear Regression is used to explain the relationship between
+- One continuous target (Y) variable, and - Two or more predictor (X) variables.
+If we have for example 4 predictor variables, then:
+- B0: intercept (X=0) - B1: the coefficient or parameter of 𝑋1:
+- B2: the coefficient of parameter 𝑋2: and so on
+If there are only two variables then we can visualize the values. Consider the following function.
+The variables 𝑋1and 𝑋2 can be visualized on a 2D plane; let’s do an example on the
+next slide. The table contains different values of the
+predictor variables 𝑋1 and 𝑋2. The position of each point is placed on the 2D plane, color
+coded accordingly. Each value of the predictor variables 𝑋1 and
+𝑋2 will be mapped to a new value 𝑌 (y hat) the new values of 𝑌 (y hat) are mapped
+in the vertical direction, with height proportional to the value that yhat takes.
+We can fit the Multiple linear regression as follows:
+- We can extract the 4 predictor variables and store them in the variable Z.
+- Then train the model as before using the method train, with the features or depended
+variables and the targets : (colon) We can also obtain a prediction using the
+method predict. In this case, the input is an array or dataframe with 4 columns, the
+number of rows correspond to the number of samples.
+The output is an array with the same number of elements as number of samples.
+The intercept is an attribute of the object. And the coefficients are also attributes.
+It is helpful to visualize the equation, replacing the dependent variable names with actual names.
+This is identical to the form we discussed earlier.
