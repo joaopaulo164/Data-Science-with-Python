@@ -1,0 +1,5 @@
+In this module, we are going to talk about model evaluation.
+In this lesson you will learn about: Model Evaluation
+Over-fitting, Under-fitting and Model Selection Ridge Regression
+Grid Search And answer the Question:
+How can you be certain your model works in the real world and performs optimally.

@@ -1,0 +1,53 @@
+In this video we’ll discuss Ridge Regression. Ridge regression prevents over-fitting.
+In this video we will focus on polynomial regression for visualization, but over-fitting is also
+a big problem when you have multiple independent variables or features.
+Consider the following 4th order polynomial in orange. The blue points are generated from
+this function. We can use a 10th order polynomial to fit the data. The estimated function in
+blue does a good job at approximating the true function.
+In many cases real data has outliers. For example, this point shown here does not appear
+to come from the function in orange. If we use a 10th order polynomial function to fit
+the data, the estimated function in blue is incorrect and is not a good estimate of the
+actual function in orange.
+If we examine the expression for the estimated function, we see the estimated polynomial
+coefficients have a very large magnitude. This is especially evident for the higher
+order polynomials. Ridge regression controls the magnitude of these polynomial coefficients
+by introducing the parameter alpha.
+Alpha is a parameter we select before fitting or training the model. Each row in the following
+table represents an increasing value of alfa. Let’s see how different values of alpha
+change the model.
+This table represents the polynomial coefficients for different values of alfa. The columns
+correspond to the different polynomial coefficients and the rows correspond to the different values
+of alfa. As alfa increases, the parameters get smaller. This is most evident for the
+higher order polynomial features, but alpha must be selected carefully. If alpha is too
+large, the coefficients will approach zero and under-fit the data.
+If alpha is zero, the over-fitting is evident. For alpha equal to 0.001, the over fitting
+begins to subside. For alpha equal to 0.01, the estimated function
+tracks the actual function. When alpha equals 1, we see the first signs
+of under-fitting. The estimated function does not have enough flexibility.
+At alpha equals to 10, we see extreme under-fitting; it does not even track the two points.
+In order to select alpha we use cross-validation.
+To make a prediction using ridge regression, import ridge from sklearn linear models. Create
+a Ridge object using the constructor. The parameter alpha is one of the arguments of
+the constructor. We train the model using the fit method. To make a prediction, we use
+the predict method.
+In order to determine the parameter alpha, we use some data for training. We use a second
+set called validation data; this is similar to test data, but it is used to select parameters
+like alpha. We start with a small value of alpha, we train the model, make a prediction
+using the validation data, then calculate the R squared and store the values. Repeat
+the value for a larger value of alpha. We train the model again, make a prediction using
+the validation data, then calculate the R squared and store the values of R squared.
+We repeat the process for a different alpha value, training the model, and making a prediction.
+We select the value of alpha that maximizes the R squared. Note that we can use other
+metrics to select the value of alpha like mean squared error.
+The Overfitting problem is even worse if we have lots of features. The following plot
+shows the different values of R squared on the vertical access. The horizontal axis represent
+different values for alpha.
+We use several features from our used car data set and a second order polynomial function.
+The training data is in red and validation data is in blue. We see as the value for alpha
+increases, the value the R squared increases and converges at approximately 0.75.
+In this case, we select the maximum value of alpha because running the experiment for higher
+values of alpha have little impact.
+Conversely, as alpha increases, the R squared on the training data decreases. This is because
+the term alpha prevents overfitting. This may improve the results in the unseen data,
+but the model has worse performance on the test data. See the lab on how to generate
+this plot.
