@@ -1,0 +1,29 @@
+Welcome to Python 101 for Data Science! In this course we’re going to cover the
+fundamental topics of the Python programming language.
+After completing all four modules, you’ll be able to start writing your very own Python
+programs. Based on recent surveys, Python was and still
+is the MOST popular, high-level, open-source programming language!
+It is a powerful, fast and dynamic programming language that runs everywhere.
+It’s also interactive, object-oriented, and very easy to learn.
+Anyone can create programs with it. It’s particularly great for web development,
+and scientific computing. With its vast libraries, it’s also useful for data visualization
+and data analytics. This course covers Python 3 and its many new
+features. It is comprised of four modules. We'll start off with Python basics, writing
+your first program, and then cover, in detail, types, expressions, variables, strings and
+string operations. In the 2nd module we'll introduce you to Python
+data structures, namely lists and tuples, sets and dictionaries.
+Lists and tuples, are called compound data types and are one of the key types of data
+structures in Python. Sets and dictionaries are types of collections.
+In the 3rd module we'll cover Python programming fundamentals, including conditions, branching,
+loops, functions, and objects and classes. Specifically, you’ll learn about comparison
+and logic operators, and the if, else, and elif statements, for and while loops, how
+to use some of Python’s built-in functions, as well as how build your own functions, and
+how to create objects and classes using object constructors and attributes.
+And finally, in the 4th module we'll show you how to work with data in Python.
+Specifically, how to read and write with the open method, and how to load, work with, and
+save data in pandas. The hands-on labs after each module will have
+you practice what you learn, using Jupyter notebooks on Cognitive Class.ai Labs.
+There’s a lot to go over but by practicing all these concepts you’ll be well on your
+way to using Python in your own applications. We’re sure you’ll be up and running with
+Python in no time! So, adjust your headphones and let’s get
+started!
