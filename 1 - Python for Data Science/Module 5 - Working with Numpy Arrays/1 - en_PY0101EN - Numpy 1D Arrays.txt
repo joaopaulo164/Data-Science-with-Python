@@ -1,0 +1,115 @@
+In this video, we will be covering Numpy in 1D, in particular "n d arrays". Numpy is a
+library for scientific computing. It has many useful functions. There are many other advantages
+like speed an memory. Numpy is also the basis for pandas, so check out our pandas video.
+In this video we will be covering: 1) The Basics and Array Creation 2) Indexing and
+Slicing 3) Basic Operations 4) Universal Functions Let's go over how to create a numpy array.
+A Python list is a container that allows you to store and access data. Each element is
+associated with an index. We can access each element using a square bracket, as follows.
+A "numpy" array or "ndarray" is similar to a list. It's usually fixed in size and each
+element is of the same type, in this case, integers. We can cast a list to a numpy array
+by first importing numpy. We then cast the list as follows. We can access the data via
+an index. As with a list, we can access each element with an integer and a square bracket.
+The value of 'a' is stored as follows. If we check the type of the array we get "numpy.ndarray".
+As numpy arrays contain data of the same type, we can use the attribute "dtype" to obtain
+the data-type of the array’s elements. In this case a 64-bit integer.
+Let's review some basic array attributes using the array 'a'. The attribute size is the number
+of elements in the array. As there are 5 elements, the result is 5. The next two attributes will
+make more sense when we get to higher dimensions, but let's review them. The attribute "ndim”
+represents the number of array dimensions or the rank of the array, in this case one.
+The attribute "shape” is a tuple of integers indicating the size of the array in each dimension.
+We can create a numpy array with real numbers. When we check the type of the array, we get
+numpy.ndarray. If we examine the attribute "dtype," we see float 64 as the elements are
+not integers. There are many other attributes. Check out "numpy.org”.
+Let's review some Indexing and Slicing methods. We can change the first element of the array
+to 100, as follows. The arrays first value is now 100. We can change the 5-th element
+of the array as follows. The fifth element is now 0.
+Like lists and tuples, we can slice a numpy array. The elements of the array correspond
+to the following index. We can select the elements from 1 to 3 and assign it to a new
+numpy array 'd' as follows. The elements in 'd' correspond to the index. Like lists, we
+do not count the element corresponding to the last index.
+We can assign the corresponding indexes to new values as follows. The array 'c' now has
+new values. See the labs or numpy.org for more examples of what you can do with numpy.
+Numpy makes it easier to do many operations that are commonly performed in data science.
+These same operations are usually computationally faster and require less memory in numpy compared
+to regular Python. Let's review some of these operations on 1 dimensional arrays. We will
+look at many of the operations in the context of Euclidian vectors to make things more interesting.
+Vector addition is a widely used operation in data science. Consider the vector 'u' with
+two elements; the elements are distinguished by the different colors. Similarly, consider
+the vector 'v' with two components. In vector addition, we create a new vector in this case
+'z'. The first component of 'z' is the addition of the first component of vectors 'u' and
+'v'. Similarly, the second component is the sum of the second components of 'u' and 'v'.
+This new vector 'z' is now a linear combination of the vector 'u' and 'v'.
+Representing vector addition with line segment or arrows is helpful. The first vector is
+represented in red; the vector will point in the direction of the two components.
+The first component of the vector is one; as a result, the arrow is offset one unit from
+the origin in the horizontal direction. The second component is 0. We represent this component
+in the vertical direction, as this component is zero the vector does not point in the horizontal
+direction. We represent the second vector in blue. The first component is zero, therefore,
+the arrow does not point in the horizontal direction. The second component is one.
+As a result, the vector points in the vertical direction one unit. When we add the vector
+'u' and 'v' we get the new vector 'z'. We add the first component, this corresponds
+to the horizontal direction. We also add the second component. It's helpful to use the
+tip-to-tail method when adding vectors, placing the tail of vector 'v' on the tip of vector 'u'.
+The new vector 'z' is constructed by connecting the base of the first vector 'u'
+with the tail of the second 'v'. The following 3 lines of code will add the
+two lists and place the result in the list 'z'.
+We can also perform vector addition with one line of numpy code. It would require multiple
+lines to perform vector subtraction on two lists, as shown on the right side of the screen.
+In addition, the numpy code will run much faster. This is important if you have lots
+of data. We can also perform vector subtraction by
+changing the addition sign to a subtraction sign. It would require multiple lines to perform
+vector subtraction on two lists, as shown on the right side of the screen.
+Vector multiplication with a Scalar is another commonly performed operation. Consider the
+vector 'y', each component is specified by a different color. We simply multiply the
+vector by a scaler value, in this case, 2. Each component of the vector is multiplied
+by 2; in this case, each component is doubled. We can use the line segment or arrows to visualize
+what’s going on. The original vector y is in purple. After multiplying it by a scalar
+value of 2, the vector is stretched out by two units, as shown in red. The new vector
+is twice as long in each direction. Vector multiplication with a scalar only requires
+one line of code using Numpy. It would require multiple lines to perform the same task as
+shown with python lists, as shown on the right side of the screen. In addition, the operation
+would also be much slower. Hadamard product is another widely used operation
+in data science. Consider the following two vectors 'u' and 'v'. The Hadamard product
+of 'u' and 'v' is a new vector 'z'. The first component of 'z' is the product of the first
+element of 'u' and 'v'. Similarly, the second component is the product of the second element
+of 'u' and 'v'. The resultant vector consists of the entrywise product of 'u' and 'v'.
+We can also perform Hadamard product with 1 line of code in Numpy. It would require
+multiple lines to perform Hadamard product on two lists as shown on the right side of
+the screen. The dot product is another widely used operation
+in data science, consider the vector 'u' and 'v'. The dot product is a single number given
+by the following term and represents how similar two vectors are. We multiply the first component
+from 'v' and 'u'. We then multiply the second component and add the result together.
+The result is a number that represents how similar the two vectors are.
+We can also perform dot product using the numpy function "dot” and assign it the variable
+"result” as follows. Consider the array 'u'. The array contains
+the following elements. If we add a scalar value to the array, numpy will add that value
+to each element. This property is known as broadcasting.
+A universal function is a function that operates on ndarrays.
+We can apply a universal function to a Numpy array. Consider the arrays 'a'. We can calculate
+the mean or average value of all the elements in 'a' using the method "mean”. This corresponds
+to the average of all the elements. In this case the result is zero.
+There are many other functions, for example, consider the numpy arrays 'b'. We can find
+the maximum value using the method 5. We see the largest value is 5. Therefore, the method
+max returns a 5. We can use numpy to create functions that
+map numpy arrays to new numpy arrays. Let's implement some code on the left side of the
+screen and use the right side of the screen to demonstrate what's going on. We can access
+the value of pi in Numpy as follows. We can create the following numpy array in Radians.
+This array corresponds to the following vector. We can apply the function "sine" to the array
+x and assign the values to the array y; this applies the sine function to each element
+in the array. This corresponds to applying the sine function to each component of the
+vector. The result is a new array y where each value corresponds to a sine function
+being applied to each element in the array x.
+A useful function for plotting mathematical functions is "linespace". Linespace returns
+evenly spaced numbers over a specified interval. We specify the starting point of the sequence.
+The ending point of the sequence. The parameter "num" indicates the Number of samples to generate,
+in this case, 5. The space between samples is 1.
+If we change the parameter num to 9, we get 9 evenly spaced numbers over the interval
+from -2 to 2. The result is the difference between subsequent samples is 0.5 as opposed
+to one as before. We can use the function linespace to generate
+100 evenly spaced samples from the interval 0 to 2 pi. We can use the Numpy function sine
+to map the array x to a new array y. We can import the library pyplot as plt to help us
+plot the function. As we are using a Jupyter notebook, we use the command "matplotlib inline"
+to display the plot. The following command plots a graph. The first input corresponds
+to the values for the horizontal or x-axis. The second input corresponds to the values
+for the vertical or y-axis. There is a lot more you can do with Numpy. Check out the
+labs and numpy.org for more. Thanks for watching this video.

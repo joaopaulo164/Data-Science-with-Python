@@ -1,0 +1,15 @@
+Congratulation on reaching the end of this course. Well done!
+By now you should be much more familiar with Python. But you won't really master these
+concepts unless you take the time to create some of your own Python programs.
+So feel free to use these videos as much as needed and reference Python documentation
+as you see fit at docs.python.org/3/ If you have questions, feel free to post them
+in the discussion forum for this course. Finally, since you have come this far, we
+encourage you to take the graded review questions for each module, if you haven't done so already,
+as well as the final exam. It's okay to find some of the questions difficult
+to answer. Unlike the final exam, the review questions for each module are not time limited,
+so you can take the time to review the material before answering each question.
+We hope you found the hands-on labs after each module worthwhile and that you’re now
+ready to use Python to create your own programs and applications, and that you’re motivated
+to learn more advanced topics in Python. It has been a pleasure to introduce you to
+Python and we look forward to see you succeed in this endeavour.
+Thanks for taking this course!
