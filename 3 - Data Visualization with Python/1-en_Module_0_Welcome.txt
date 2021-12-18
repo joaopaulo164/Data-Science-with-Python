@@ -1,0 +1,33 @@
+Hello everyone and welcome to data visualization with Python. I'm Alex
+Aklson, a data scientist at IBM, and I'm your instructor for this course.
+Throughout this course we're gonna learn how to create meaningful, effective, and
+aesthetically pleasing data visuals and plots in python using Matplotlib and a
+couple of other libraries namely Seaborn and Folium. The course will consist of
+five modules. In module 1, we will briefly discuss data visualization and some of
+the best practices to keep in mind when creating data visuals. We will then learn
+about Matplotlib: its history, architecture, and the three layers that
+form its architecture. We will also learn about the data set that we will use
+throughout the course in these lectures as well as the hands-on sessions. We will
+essentially be working with a data set that was curated by the United Nations
+on immigration from different countries to Canada from 1980 to 2013. Finally we
+will look into line plots and learn how to use Matplotlib
+to generate them. In module 2 we will continue on with a few more basic data
+visualizations such as area plots histograms and bar charts and we will
+learn how to use matplotlib to create them and even create different versions
+of these plots. In module 3 we will cover a set of specialized visualizations such
+as pie charts box plots scatter plots and bubble plots and we will learn how
+to create them still using Matplotlib. In module 4 we will learn about more
+advanced visuals such as waffle charts, that provide a fine-grained view of
+proportions of different categories in a data set. We will also learn about word
+clouds, that depict word frequency or importance in a body of text. Finally, in
+this module, we will explore another library,
+Seaborn, which is built on top of Matplotlib to simplify the process of
+creating plots and visuals and we will get a taste of its
+effectiveness through the creation of regression plots. Finally, in module 5 we
+will explore another library Folium which was built primarily to visualize
+geospatial data. So we will learn how to create maps of different regions of the
+world, superimpose markers of different shapes on top of the maps, and learn how
+to create choropleth maps. After completing this course, you will be able
+to use different visualization libraries in python namely Matplotlib, Seaborn, and
+Folium to create expressive visual representations of your data for
+different purposes. So let's get right into it.
